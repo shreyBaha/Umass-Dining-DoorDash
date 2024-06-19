@@ -1,12 +1,7 @@
 const mongoose = require('mongoose')
 
-const orderSchema = mongoose.Schema(
+const diningSchema = mongoose.Schema(
   {
-    id: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: 'User',
-    },
     dining_hall: {
       type: String,
       required: [true, 'Please select dining hall'],
@@ -28,4 +23,4 @@ const orderSchema = mongoose.Schema(
   }
 )
 
-module.exports = mongoose.model('Dining', orderSchema)
+module.exports = mongoose.model('Dining', diningSchema)

@@ -25,7 +25,7 @@ except Exception as e:
     print(e)
 
 db = client.get_database("HackUmass2023")
-collection = db.get_collection("Dining-Info")
+collection = db.get_collection("dinings")
 test=collection.find()
 print(test)
 collection.delete_many({})

@@ -22,8 +22,8 @@ const createOrder = asyncHandler(async (req, res) => {
   }
 
   const order = await Order.create({
-    dining_hall: req.body.text,
-    food: req.body.text,
+    dining_hall: req.body.dining_hall,
+    food: req.body.food,
     user: req.user.id,
   })
 
